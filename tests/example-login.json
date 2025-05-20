@@ -1,0 +1,13 @@
+{
+  "url": "https://example.com/login",
+  "inputs": [
+    { "selector": "#username", "value": "alice" },
+    { "selector": "#password", "value": "SuperSecure123" }
+  ],
+  "steps": [
+    { "action": "click", "selector": "#loginButton" }
+  ],
+  "expectedElements": [
+    { "selector": "#welcomeMessage", "text": "Welcome, alice" }
+  ]
+}

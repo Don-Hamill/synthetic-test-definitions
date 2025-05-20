@@ -1,0 +1,21 @@
+{
+  "name": "synthetic-test-definitions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Declarative synthetic-test definitions, schema, and stub CLI.",
+  "bin": {
+    "stdx": "bin/stdx"
+  },
+  "scripts": {
+    "validate": "node validate.js",
+    "cli": "node src/index.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "chalk": "^5.4.1",
+    "glob": "^10.4.5",
+    "yargs": "^17.7.2"
+  }
+}

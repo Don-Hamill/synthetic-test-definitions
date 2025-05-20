@@ -1,0 +1,17 @@
+name: Validate synthetic definitions
+
+on:
+  pull_request:
+    paths:
+      - 'tests/*.json'
+      - 'synthetic-test-schema.json'
+
+jobs:
+  schema-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ajv-cli
+        run: npm install -g ajv-cli
+      - name: Validate all test definitions
+        run: ajv validate -s synthetic-test-schema.json -d 'tests/*.json'

@@ -1,0 +1,9 @@
+{
+  "url": "https://example.com",
+  "steps": [
+    { "action": "click", "selector": "#cta" }
+  ],
+  "expectedElements": [
+    { "selector": "#thankYou", "text": "Thanks!" }
+  ]
+}

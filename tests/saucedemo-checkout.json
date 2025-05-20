@@ -1,0 +1,27 @@
+{
+  "url": "https://www.saucedemo.com/",
+  "inputs": [
+    { "selector": "#user-name", "value": "standard_user" },
+    { "selector": "#password",  "value": "secret_sauce" }
+  ],
+  "steps": [
+    { "action": "click", "selector": "#login-button" },
+    { "action": "click", "selector": "#add-to-cart-sauce-labs-backpack" },
+    { "action": "click", "selector": ".shopping_cart_link" },
+    { "action": "click", "selector": "#checkout" },
+
+    { "action": "type",  "selector": "#first-name",  "value": "John" },
+    { "action": "type",  "selector": "#last-name",   "value": "Doe"  },
+    { "action": "type",  "selector": "#postal-code", "value": "10001" },
+
+    { "action": "click", "selector": "#continue" },
+    { "action": "click", "selector": "#finish" }
+  ],
+  "expectedElements": [
+    {
+      "selector": ".complete-header",
+      "text": "Thank you for your order!"
+
+    }
+  ]
+}
